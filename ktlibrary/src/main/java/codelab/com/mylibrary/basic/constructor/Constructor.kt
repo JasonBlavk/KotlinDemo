@@ -4,7 +4,6 @@ package codelab.com.mylibrary.basic.constructor
  * Created by WhiteTec on 2017/6/23.
  */
 
-
 fun main(args: Array<String>) {
 
     var human = Human("jack" ,12)
