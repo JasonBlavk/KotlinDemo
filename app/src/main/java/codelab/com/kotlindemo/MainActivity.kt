@@ -14,7 +14,7 @@ import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import codelab.com.mylibrary.basic.reference.RecycleActivity
+import codelab.com.mylibrary.basic.recycleview.RecycleActivity
 import codelab.com.mylibrary.function.DontCreateMe
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

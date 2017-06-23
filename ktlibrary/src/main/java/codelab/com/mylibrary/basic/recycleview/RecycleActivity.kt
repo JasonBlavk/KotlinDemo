@@ -1,15 +1,18 @@
-package codelab.com.mylibrary.basic.reference
+package codelab.com.mylibrary.basic.recycleview
 
 import android.app.Activity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import codelab.com.mylibrary.R
 import kotlinx.android.synthetic.main.recyle_layout.*
 
 /**
  * Created by WhiteTec on 2017/5/18.
+ *
  * 启动RecycleActivity：
  * startActivity(Intent(MainActivity@this, RecycleActivity::class.java))
+ *
  */
 
 class RecycleActivity : Activity() {
@@ -23,6 +26,9 @@ class RecycleActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recyle_layout)
+
+
+        findViewById(R.id.recycle_view1) as RecyclerView
 
         recycle_view1.layoutManager = LinearLayoutManager(this)
 

@@ -1,4 +1,4 @@
-package codelab.com.mylibrary.basic.reference;
+package codelab.com.mylibrary.basic.recycleview;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
