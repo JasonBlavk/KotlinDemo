@@ -1,0 +1,10 @@
+
+
+方法定义，参数类型为 OnAnimStateListener.(...) -> boolean
+EventManager
+@JvmStatic inline fun onFold(eventId: Int, eventName: String, trackIndex: Int, loopCount: Int, operation: OnAnimStateListener.(id: Int, eventName: String, trackIndex: Int, loopCount: Int) -> Boolean): Boolean {
+
+
+调用的地方： OnAnimStateListener::onAnimComplete 相当于调用 类的成员函数
+
+EventManager.onFold(eventId,eventName,trackIndex,loopCount,OnAnimStateListener::onAnimComplete)
