@@ -51,11 +51,11 @@ fun main(args: Array<String>) {
         println(i ) // 5 2 3 4
     }
 
-//    for ( i in 0 .. items.size){
-//        println(i)
-//        items[i]++
-//        println(items)
-//    }
+    for ( i in 0 ..  items.size){
+        println(i)
+        items[i]++
+        println(items)
+    }
 //
     run {
         println(items.forEach {
