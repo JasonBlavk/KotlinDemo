@@ -58,4 +58,57 @@ fun smartConvert(x: Any) {
     val x: String? = y as? String
     println(x)
 
+    // this 用法
+//    A().B().foo()
+
+    val listWithNulls: List<String?> = listOf("A", null)
+    for (item in listWithNulls) {
+        item?.let {
+            println(it)
+        } // 输出 A 并忽略 null
+    }
+
+    //Elvis 操作符 elvis 操作符就返回其左侧表达式，否则返回右侧表达式。
+    // 请注意，当且仅当左侧为空时，才会对右侧表达式求值。
+    val elvis = x?.length ?: -1
+    println("elvis = $elvis")
+
+
+    //!! 操作符 如果 b 为空，就会抛出一个 NPE 异常 KotlinNullPointerException
+    val str : String? = null
+    val l = str!!.length
+    println(l)
+
+    //安全的类型转换 as?
+    val aInt: Int? = str as? Int
+
+    println("安全的类型转换 as? $aInt")
+
+}
+
+
+class A { // 隐式标签 @A
+     inner class B { // 隐式标签 @B
+        fun foo() { // 隐式标签 @foo
+            val a = this@A // A 的 this
+            val b = this@B // B 的 this
+
+            val c = this // foo() 的接收者，一个 Int
+            val c1 = this // foo() 的接收者，一个 Int
+
+            val funLit = lambda@ fun String.() {
+                val d = this@B // funLit 的接收者
+                println(d)
+            }
+            
+            val funLit2 = { s: String ->
+                // foo() 的接收者，因为它包含的 lambda 表达式
+                // 没有任何接收者
+                val d1 = this
+                println(d1)
+            }
+
+        }
+
+    }
 }
