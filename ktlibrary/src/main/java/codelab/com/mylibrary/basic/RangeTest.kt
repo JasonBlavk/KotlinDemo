@@ -84,6 +84,13 @@ fun smartConvert(x: Any) {
 
     println("安全的类型转换 as? $aInt")
 
+    // 类引用 函数引用 ::
+    fun isOdd(x: Int) = x % 2 != 0
+    fun isOdd(s: String) = s == "brillig" || s == "slithy" || s == "tove"
+
+    val numbers = listOf(1, 2, 3)
+    println(numbers.filter(::isOdd))
+
 }
 
 
@@ -100,7 +107,7 @@ class A { // 隐式标签 @A
                 val d = this@B // funLit 的接收者
                 println(d)
             }
-            
+
             val funLit2 = { s: String ->
                 // foo() 的接收者，因为它包含的 lambda 表达式
                 // 没有任何接收者
