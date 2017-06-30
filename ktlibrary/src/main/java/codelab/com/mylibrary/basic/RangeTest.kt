@@ -35,6 +35,9 @@ fun main(args: Array<String>) {
     println((1..12 step 12).last)
     smartConvert("test")
 
+    args.map(::println)
+
+
 }
 
 // 只能转换
