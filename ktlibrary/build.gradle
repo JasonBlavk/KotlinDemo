@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion 25
@@ -40,7 +42,8 @@ dependencies {
     compile "com.squareup.retrofit2:converter-gson:$retrofit_version"
     compile"com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
 
-
+    compile "com.jakewharton:butterknife:$butterknife_version"
+    apt "com.jakewharton:butterknife-compiler:$butterknife_version"
 
 //    compile 'io.reactivex:rxandroid:1.2.1'
 
