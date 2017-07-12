@@ -1,4 +1,4 @@
-package codelab.com.kotlindemo;
+package codelab.com.kotlindemo.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import codelab.com.kotlindemo.R;
 
 /**
  * Created by WhiteTec on 2017/6/30.

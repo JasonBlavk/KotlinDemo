@@ -1,6 +1,5 @@
 package benny.unit
 
-import io.reactivex.Observable
 import java.io.File
 import java.util.concurrent.Executors
 
@@ -19,11 +18,11 @@ fun main(args: Array<String>) {
     }
 
     val text = File(ClassLoader.getSystemResource("input").path).readText()
-    Observable.fromIterable(text.toCharArray().asIterable()).filter { !it.isWhitespace() }.groupBy { it }.subscribe {
-        o -> o.count()
+//    Observable.fromIterable(text.toCharArray().asIterable()).filter { !it.isWhitespace() }.groupBy { it }.subscribe {
+//        o -> o.count()
 //            .subscribe{
 //        println("${o.key} -> $it")
 //    }
-    }
+//    }
 
 }

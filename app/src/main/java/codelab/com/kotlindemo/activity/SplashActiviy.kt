@@ -1,4 +1,4 @@
-package codelab.com.kotlindemo
+package codelab.com.kotlindemo.activity
 
 import android.app.Activity
 import android.os.Bundle
@@ -7,9 +7,9 @@ import android.view.MenuItem
 /**
  * Created by WhiteTec on 2017/6/23.
  */
-class SplashActiviy : Activity() {
+class SplashActiviy : android.app.Activity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: android.os.Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
@@ -18,7 +18,7 @@ class SplashActiviy : Activity() {
 
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: android.view.MenuItem?): Boolean {
         when (item?.itemId){
 
         }

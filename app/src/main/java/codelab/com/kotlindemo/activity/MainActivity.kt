@@ -1,4 +1,4 @@
-package codelab.com.kotlindemo
+package codelab.com.kotlindemo.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import codelab.com.kotlindemo.R
 import codelab.com.mylibrary.basic.recycleview.RecycleActivity
 import codelab.com.mylibrary.function.DontCreateMe
 
@@ -86,7 +87,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         val id = item.itemId
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_recycleview) {
+            startActivity(Intent(MainActivity@this,CustomRecycleActivity::class.java))
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 

@@ -1,15 +1,13 @@
-package codelab.com.kotlindemo
+package codelab.com.kotlindemo.activity
 
-import android.app.Activity
-import android.os.Bundle
 import codelab.com.mylibrary.utils.makeToast
 
 /**
  * Created by WhiteTec on 2017/6/23.
  */
 
-class SecondActivity : Activity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+class SecondActivity : android.app.Activity() {
+    override fun onCreate(savedInstanceState: android.os.Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
